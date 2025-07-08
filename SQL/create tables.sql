@@ -66,7 +66,7 @@ GO
 
 
 
-REATE TABLE [dbo].[Assignments](
+CREATE TABLE [dbo].[Assignments](
 	[AssignmentId] [int] IDENTITY(1,1) NOT NULL,
 	[CourseId] [int] NOT NULL,
 	[AssignmentTitle] [varchar](128) NOT NULL,
