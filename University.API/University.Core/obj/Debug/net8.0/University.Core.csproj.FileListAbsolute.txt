@@ -1,0 +1,16 @@
+D:\Programming\88Ninety\88NinetyTraining\University.API\University.Core\obj\Debug\net8.0\University.Core.csproj.AssemblyReference.cache
+D:\Programming\88Ninety\88NinetyTraining\University.API\University.Core\obj\Debug\net8.0\University.Core.GeneratedMSBuildEditorConfig.editorconfig
+D:\Programming\88Ninety\88NinetyTraining\University.API\University.Core\obj\Debug\net8.0\University.Core.AssemblyInfoInputs.cache
+D:\Programming\88Ninety\88NinetyTraining\University.API\University.Core\obj\Debug\net8.0\University.Core.AssemblyInfo.cs
+D:\Programming\88Ninety\88NinetyTraining\University.API\University.Core\obj\Debug\net8.0\University.Core.csproj.CoreCompileInputs.cache
+D:\Programming\88Ninety\88NinetyTraining\University.API\University.Core\obj\Debug\net8.0\University.Core.sourcelink.json
+D:\Programming\88Ninety\88NinetyTraining\University.API\University.Core\bin\Debug\net8.0\University.Core.deps.json
+D:\Programming\88Ninety\88NinetyTraining\University.API\University.Core\bin\Debug\net8.0\University.Core.dll
+D:\Programming\88Ninety\88NinetyTraining\University.API\University.Core\bin\Debug\net8.0\University.Core.pdb
+D:\Programming\88Ninety\88NinetyTraining\University.API\University.Core\bin\Debug\net8.0\University.Data.dll
+D:\Programming\88Ninety\88NinetyTraining\University.API\University.Core\bin\Debug\net8.0\University.Data.pdb
+D:\Programming\88Ninety\88NinetyTraining\University.API\University.Core\obj\Debug\net8.0\Universi.31CA1AD5.Up2Date
+D:\Programming\88Ninety\88NinetyTraining\University.API\University.Core\obj\Debug\net8.0\University.Core.dll
+D:\Programming\88Ninety\88NinetyTraining\University.API\University.Core\obj\Debug\net8.0\refint\University.Core.dll
+D:\Programming\88Ninety\88NinetyTraining\University.API\University.Core\obj\Debug\net8.0\University.Core.pdb
+D:\Programming\88Ninety\88NinetyTraining\University.API\University.Core\obj\Debug\net8.0\ref\University.Core.dll

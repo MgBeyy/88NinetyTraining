@@ -1,0 +1,15 @@
+D:\Programming\88Ninety\88NinetyTraining\University.API\University.Data\obj\Debug\net8.0\University.Data.csproj.AssemblyReference.cache
+D:\Programming\88Ninety\88NinetyTraining\University.API\University.Data\obj\Debug\net8.0\University.Data.GeneratedMSBuildEditorConfig.editorconfig
+D:\Programming\88Ninety\88NinetyTraining\University.API\University.Data\obj\Debug\net8.0\University.Data.AssemblyInfoInputs.cache
+D:\Programming\88Ninety\88NinetyTraining\University.API\University.Data\obj\Debug\net8.0\University.Data.AssemblyInfo.cs
+D:\Programming\88Ninety\88NinetyTraining\University.API\University.Data\obj\Debug\net8.0\University.Data.csproj.CoreCompileInputs.cache
+D:\Programming\88Ninety\88NinetyTraining\University.API\University.Data\obj\Debug\net8.0\University.Data.sourcelink.json
+D:\Programming\88Ninety\88NinetyTraining\University.API\University.Data\bin\Debug\net8.0\University.Data.deps.json
+D:\Programming\88Ninety\88NinetyTraining\University.API\University.Data\bin\Debug\net8.0\University.Data.runtimeconfig.json
+D:\Programming\88Ninety\88NinetyTraining\University.API\University.Data\bin\Debug\net8.0\University.Data.dll
+D:\Programming\88Ninety\88NinetyTraining\University.API\University.Data\bin\Debug\net8.0\University.Data.pdb
+D:\Programming\88Ninety\88NinetyTraining\University.API\University.Data\obj\Debug\net8.0\University.Data.dll
+D:\Programming\88Ninety\88NinetyTraining\University.API\University.Data\obj\Debug\net8.0\refint\University.Data.dll
+D:\Programming\88Ninety\88NinetyTraining\University.API\University.Data\obj\Debug\net8.0\University.Data.pdb
+D:\Programming\88Ninety\88NinetyTraining\University.API\University.Data\obj\Debug\net8.0\University.Data.genruntimeconfig.cache
+D:\Programming\88Ninety\88NinetyTraining\University.API\University.Data\obj\Debug\net8.0\ref\University.Data.dll
