@@ -1,6 +1,10 @@
-﻿using University.Core.DTOs;
+﻿using Microsoft.Extensions.Logging;
+using University.Core.DTOs;
+using University.Core.Exceptions;
 using University.Core.Forms;
+using University.Core.Helpers;
 using University.Core.Services.Interfaces;
+using University.Core.Validations;
 using University.Data.Entities;
 using University.Data.Repositories.Interfaces;
 
@@ -9,10 +13,13 @@ namespace University.Core.Services
     public class StudentService : IStudentService
     {
         private readonly IStudentRepository _studentRepository;
+        private readonly ILogger<StudentService> _logger;
 
-        public StudentService(IStudentRepository studentRepository)
+
+        public StudentService(IStudentRepository studentRepository, ILogger<StudentService> logger)
         {
             _studentRepository = studentRepository;
+            _logger = logger;
         }
 
         public void Create(CreateStudentForm Form)
@@ -21,11 +28,14 @@ namespace University.Core.Services
             if (Form == null)
                 throw new ArgumentNullException(nameof(Form));
 
-            if (string.IsNullOrEmpty(Form.Name))
-                throw new Exception("Name Is Required!");
-
-            if (string.IsNullOrEmpty(Form.Email))
-                throw new Exception("Email Is Required!");
+            var validation = FormValidator.Validate(Form);
+            if (!validation.IsValid) {
+                LoggingHelper.LogValidationFaild(_logger);
+                throw new BusinessException(validation.Errors);
+            }
+            var duplicateEmailStudents = _studentRepository.GetAll(s => s.Email == Form.Email);
+            if (duplicateEmailStudents.Any())
+                throw new BusinessException("This email already exists");
 
             // Logic
             var student = new Student()
@@ -36,7 +46,7 @@ namespace University.Core.Services
 
 
             // Saving
-            _studentRepository.Add(student);
+            _studentRepository.Create(student);
             _studentRepository.SaveChanges();
         }
 
@@ -45,7 +55,7 @@ namespace University.Core.Services
             var student = _studentRepository.GetById(Id);
             
             if (student == null)
-                throw new Exception("Unable to find Student");
+                throw new NotFoundException("Unable to find Student");
 
             _studentRepository.Delete(student);
             _studentRepository.SaveChanges();
@@ -67,7 +77,7 @@ namespace University.Core.Services
         {
             var student = _studentRepository.GetById(Id);
             if (student == null)
-                throw new Exception("Unable to find Student");
+                throw new NotFoundException("Unable to find Student");
 
             var dto = new StudentDto
             {
@@ -85,11 +95,17 @@ namespace University.Core.Services
             if (Form == null)
                 throw new ArgumentNullException(nameof(Form));
 
-            if (string.IsNullOrEmpty(Form.Name))
-                throw new Exception("Name Is Required!");
+            var validation = FormValidator.Validate(Form);
+            if (!validation.IsValid)
+            {
+                LoggingHelper.LogValidationFaild(_logger);
+                throw new BusinessException(validation.Errors);
+            }
+
+
             var student = _studentRepository.GetById(Id);
             if (student == null)
-                throw new Exception("Unable to find Student");
+                throw new BusinessException("Unable to find Student");
 
             // Logic
             student.Name = Form.Name;

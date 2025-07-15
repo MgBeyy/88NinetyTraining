@@ -1,4 +1,5 @@
-﻿using University.Data.Context;
+﻿using System.Linq.Expressions;
+using University.Data.Context;
 using University.Data.Entities;
 using University.Data.Repositories.Interfaces;
 
@@ -21,15 +22,16 @@ namespace University.Data.Repositories
 
         public Student GetById(int Id)
         {
-            return _context.Students.First(t => t.Id == Id);
+            return _context.Students.Find(Id);
         }
 
-        public void Add(Student student)
+        public void Create(Student student)
         {
             if (student == null)
                 throw new ArgumentNullException(nameof(student));
 
             student.CreatedAt = DateTime.Now;
+            student.LastUpdatedAt = DateTime.Now;
             _context.Add(student);
         }
 
@@ -54,7 +56,10 @@ namespace University.Data.Repositories
             _context.SaveChanges();
         }
 
-
+        public List<Student> GetAll(Expression<Func<Student, bool>> where)
+        {
+            return _context.Students.Where(where).ToList();
+        }
     }
 }
 

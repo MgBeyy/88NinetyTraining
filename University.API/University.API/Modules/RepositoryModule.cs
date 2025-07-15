@@ -12,7 +12,11 @@ namespace University.API.Modules
             builder.RegisterType<StudentRepository>()
                    .As<IStudentRepository>()
                    .InstancePerLifetimeScope();
-            
+
+            builder.RegisterType<CourseRepository>()
+                   .As<ICourseRepository>()
+                   .InstancePerLifetimeScope();
+
             builder.RegisterType<UniversityDbContext>()
                 .AsSelf()
                 .InstancePerLifetimeScope();

@@ -1,5 +1,6 @@
 using Autofac;
 using Autofac.Extensions.DependencyInjection;
+using Serilog;
 using University.API.Modules;
 using University.Core.Services;
 using University.Core.Services.Interfaces;
@@ -19,7 +20,13 @@ builder.Host.ConfigureContainer<ContainerBuilder>(container =>
 
 });
 
+// Logging
+Log.Logger = new LoggerConfiguration()
+    .MinimumLevel.Warning()
+    .WriteTo.File("Log/log-.txt", rollingInterval: RollingInterval.Day)
+    .CreateLogger();
 
+builder.Host.UseSerilog();
 
 
 // Add services to the container.
@@ -36,6 +43,7 @@ if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
+
 }
 
 app.UseHttpsRedirection();
@@ -45,3 +53,4 @@ app.UseAuthorization();
 app.MapControllers();
 
 app.Run();
+
