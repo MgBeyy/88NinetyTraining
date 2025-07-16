@@ -1,20 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\Programming\\88Ninety\\88NinetyTraining\\University.API\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{76C333A5-B227-4C09-A251-08E95444DB5D}|University.Core\\University.Core.csproj|d:\\programming\\88ninety\\88ninetytraining\\university.api\\university.core\\services\\courseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{76C333A5-B227-4C09-A251-08E95444DB5D}|University.Core\\University.Core.csproj|solutionrelative:university.core\\services\\courseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{76C333A5-B227-4C09-A251-08E95444DB5D}|University.Core\\University.Core.csproj|d:\\programming\\88ninety\\88ninetytraining\\university.api\\university.core\\services\\studentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{76C333A5-B227-4C09-A251-08E95444DB5D}|University.Core\\University.Core.csproj|solutionrelative:university.core\\services\\studentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{15BA39CF-C1E9-4442-89E2-CF1A8D25AA2D}|University.API\\University.API.csproj|d:\\programming\\88ninety\\88ninetytraining\\university.api\\university.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{15BA39CF-C1E9-4442-89E2-CF1A8D25AA2D}|University.API\\University.API.csproj|solutionrelative:university.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -22,50 +9,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 84,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": -1,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "CourseService.cs",
-              "DocumentMoniker": "D:\\Programming\\88Ninety\\88NinetyTraining\\University.API\\University.Core\\Services\\CourseService.cs",
-              "RelativeDocumentMoniker": "University.Core\\Services\\CourseService.cs",
-              "ToolTip": "D:\\Programming\\88Ninety\\88NinetyTraining\\University.API\\University.Core\\Services\\CourseService.cs",
-              "RelativeToolTip": "University.Core\\Services\\CourseService.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAB8AAAAwAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-15T16:50:51.425Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "StudentService.cs",
-              "DocumentMoniker": "D:\\Programming\\88Ninety\\88NinetyTraining\\University.API\\University.Core\\Services\\StudentService.cs",
-              "RelativeDocumentMoniker": "University.Core\\Services\\StudentService.cs",
-              "ToolTip": "D:\\Programming\\88Ninety\\88NinetyTraining\\University.API\\University.Core\\Services\\StudentService.cs",
-              "RelativeToolTip": "University.Core\\Services\\StudentService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-15T16:52:43.537Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\Programming\\88Ninety\\88NinetyTraining\\University.API\\University.API\\Program.cs",
-              "RelativeDocumentMoniker": "University.API\\Program.cs",
-              "ToolTip": "D:\\Programming\\88Ninety\\88NinetyTraining\\University.API\\University.API\\Program.cs",
-              "RelativeToolTip": "University.API\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-15T16:50:10.044Z",
-              "EditorCaption": ""
             }
           ]
         }

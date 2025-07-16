@@ -1,4 +1,5 @@
 ﻿using AutoWrapper.Wrappers;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Net;
 using University.API.Filters;
@@ -9,6 +10,7 @@ using University.Core.Services.Interfaces;
 
 namespace University.API.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     [TypeFilter(typeof(ApiExceptionFilter))]
@@ -25,7 +27,9 @@ namespace University.API.Controllers
 
 
         [HttpGet("{Id}")]
+        [Authorize(Roles = "Student")]
         [ProducesResponseType(typeof(StudentDto), StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status401Unauthorized)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public ApiResponse GetById(int Id)
@@ -37,7 +41,9 @@ namespace University.API.Controllers
 
 
         [HttpGet()]
+        [Authorize(Roles = "Teacher")]
         [ProducesResponseType(typeof(List<StudentDto>), StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status401Unauthorized)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public ApiResponse GetAll()
         {
@@ -50,6 +56,7 @@ namespace University.API.Controllers
 
         [HttpPost()]
         [ProducesResponseType(typeof(void), StatusCodes.Status201Created)]
+        [ProducesResponseType(StatusCodes.Status401Unauthorized)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public ApiResponse Create([FromBody]CreateStudentForm Form)
@@ -64,6 +71,7 @@ namespace University.API.Controllers
 
         [HttpPut("{Id}")]
         [ProducesResponseType(typeof(void), StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status401Unauthorized)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
@@ -80,6 +88,7 @@ namespace University.API.Controllers
 
         [HttpDelete("{Id}")]
         [ProducesResponseType(typeof(void), StatusCodes.Status204NoContent)]
+        [ProducesResponseType(StatusCodes.Status401Unauthorized)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public ApiResponse Delete(int Id)

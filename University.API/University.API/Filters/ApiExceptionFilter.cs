@@ -54,7 +54,7 @@ namespace University.API.Filters
                 return;
             }
 
-            _logger.LogError(" !!! Unhandled exception !!!");
+            _logger.LogError($"!!! Unhandled exception : {context.Exception.Message} details : {context.Exception.ToString()}");
             context.Result = Response(context.Exception.Message, "Internal Server Error", StatusCodes.Status500InternalServerError);
             return;
         }
