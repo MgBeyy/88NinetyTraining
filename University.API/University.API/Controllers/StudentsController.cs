@@ -41,7 +41,6 @@ namespace University.API.Controllers
 
 
         [HttpGet()]
-        [Authorize(Roles = "Teacher")]
         [ProducesResponseType(typeof(List<StudentDto>), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status401Unauthorized)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
@@ -59,7 +58,7 @@ namespace University.API.Controllers
         [ProducesResponseType(StatusCodes.Status401Unauthorized)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-        public ApiResponse Create([FromBody]CreateStudentForm Form)
+        public ApiResponse Create([FromBody] CreateStudentForm Form)
         {
             LoggingHelper.LogController(_logger);
 
@@ -67,7 +66,7 @@ namespace University.API.Controllers
             return new ApiResponse(HttpStatusCode.Created);
 
         }
-        
+
 
         [HttpPut("{Id}")]
         [ProducesResponseType(typeof(void), StatusCodes.Status200OK)]
@@ -75,7 +74,7 @@ namespace University.API.Controllers
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-        public ApiResponse Update([FromBody]UpdateStudentForm Form, int Id)
+        public ApiResponse Update([FromBody] UpdateStudentForm Form, int Id)
 
         {
             LoggingHelper.LogController(_logger, $"id: {Id}");
@@ -84,7 +83,7 @@ namespace University.API.Controllers
             return new ApiResponse(HttpStatusCode.OK);
 
         }
-         
+
 
         [HttpDelete("{Id}")]
         [ProducesResponseType(typeof(void), StatusCodes.Status204NoContent)]

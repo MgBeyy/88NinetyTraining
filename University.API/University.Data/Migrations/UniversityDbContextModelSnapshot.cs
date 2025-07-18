@@ -210,15 +210,12 @@ namespace University.Data.Migrations
             modelBuilder.Entity("University.Data.Entities.Identity.UserRole", b =>
                 {
                     b.Property<int>("UserId")
-                        .ValueGeneratedOnAdd()
                         .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("UserId"));
 
                     b.Property<int>("RoleId")
                         .HasColumnType("int");
 
-                    b.HasKey("UserId");
+                    b.HasKey("UserId", "RoleId");
 
                     b.ToTable("UserRoles", (string)null);
                 });

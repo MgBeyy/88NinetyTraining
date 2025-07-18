@@ -12,8 +12,8 @@ using University.Data.Context;
 namespace University.Data.Migrations
 {
     [DbContext(typeof(UniversityDbContext))]
-    [Migration("20250715210235_AddIdentityTables")]
-    partial class AddIdentityTables
+    [Migration("20250718122742_Test")]
+    partial class Test
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -213,15 +213,12 @@ namespace University.Data.Migrations
             modelBuilder.Entity("University.Data.Entities.Identity.UserRole", b =>
                 {
                     b.Property<int>("UserId")
-                        .ValueGeneratedOnAdd()
                         .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("UserId"));
 
                     b.Property<int>("RoleId")
                         .HasColumnType("int");
 
-                    b.HasKey("UserId");
+                    b.HasKey("UserId", "RoleId");
 
                     b.ToTable("UserRoles", (string)null);
                 });
